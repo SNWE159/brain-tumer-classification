@@ -1,0 +1,26 @@
+{
+    "name": "Brain Tumor Classification",
+    "build": {
+        "dockerfile": "Dockerfile",
+        "context": ".."
+    },
+    "customizations": {
+        "vscode": {
+            "settings": {
+                "python.defaultInterpreterPath": "/workspace/.venv/bin/python",
+                "python.terminal.activateEnvironment": false,
+                "jupyter.notebookFileRoot": "/workspace",
+                "editor.formatOnSave": true
+            },
+            "extensions": [
+                "ms-python.python",
+                "ms-toolsai.jupyter",
+                "formulahendry.auto-rename-tag",
+                "christian-kohler.path-intellisense"
+            ]
+        }
+    },
+    "forwardPorts": [8888, 6006],
+    "postCreateCommand": "bash .devcontainer/setup.sh",
+    "remoteUser": "vscode"
+}
